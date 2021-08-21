@@ -1,0 +1,27 @@
+{
+  "name": "hack-the-6ix",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "fs": "^0.0.1-security",
+    "nodemon": "^2.0.12",
+    "url": "^0.11.0"
+  },
+  "devDependencies": {"nodemon": "^2.0.12"},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nickysterling/hack-the-6ix.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nickysterling/hack-the-6ix/issues"
+  },
+  "homepage": "https://github.com/Nickysterling/hack-the-6ix#readme"
+}

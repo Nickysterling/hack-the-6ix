@@ -8,7 +8,8 @@ html,body
 }
 
 body{
-    background-color: #0197F6;
+    background-color: #Fefbea;
+    /* background-color: #001B3D; */
     font-family: 'Comfortaa', sans-serif;
 }
 
@@ -23,7 +24,7 @@ h2{
 }
 
 p{
-    color:#9f654f;
+    color:#000;
     line-height: 2;
     font-weight: 100;
     font-size: 1.15rem;
@@ -37,7 +38,7 @@ p{
     font-size: 1.5rem;
     font-weight: 100;
     padding-left: 1em;
-    background-color: black;
+    background-color: #000;
 }
 
 #navLinks .nav-link {
@@ -49,14 +50,14 @@ p{
 }
 
 #mainNav .navbar-brand{
-    color: #7d0505;
+    color: #ffff;
     font-size: 1.8rem;
     font-weight: 100;
     padding-left: 0.1em;
 }
 
 #headings span{
-    color:#7d0505;
+    color: #000;
 }
 
 #headings h1{
@@ -76,48 +77,124 @@ p{
     }    
 }
 
+/* Ingredient Cards */
+.ingredientsList .col{
+    padding-top: 1rem;
+    padding-left: 2rem;
+}
+
+/* .ingredientsList .col .img{
+    padding-top: 1rem;
+    padding-left: 2rem;
+} */
+
 #chocolines{
     height: 2px;
     background-color:#7d0505;
     border: none;
 }
 
-.footer-linkL{
+/* .footer-linkL{
     color:white;
     margin: 0;
     margin-right: 20px;
     text-decoration: none;
     font-weight: 150;
     font-size: 1.2rem;
-}
+} */
 
-.contactbtn{
-    color:white;
-    text-decoration: none;
-    font-weight: 150;
-    font-size: 1.2rem;
-}
-
-.contactbtn:hover{
-    color:#7d0505;    
-}
-
-.footer-linkL:hover {
-    color:#7d0505;
-}
-
-.footer-linkG{
-    color:white;
+#footer-linkG{
     margin: 0;
     text-decoration: none;
     font-weight: 150;
     font-size: 1.2rem;
+    background-color: #Fefbea;
+    color:#000;
 }
 
-.footer-linkG:hover {
-    color:#7d0505;
+#footer-linkG:hover {
+    background-color: #000;
+    border-color:#Fefbea;
+    color: #Fefbea;
 }
 
 #copyright{
     margin-bottom: 0;
+}
+
+/* search bar */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'); */
+
+.wrapper{
+	min-height: 20vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.search-box{
+	background: #000;
+	position: relative;
+	padding: 15px;
+	border-radius: 50px;
+	display: flex;
+}
+
+.search-box:hover > .input-search {
+  width: 300px;
+  padding: 15px 20px;
+}
+
+.search-box:hover > .search-btn {
+  margin-right: 15px;
+}
+
+.search-box:focus-within > .input-search {
+    width: 300px;
+    padding: 15px 20px;
+  }
+  
+  .search-box:focus-within > .search-btn {
+    margin-right: 15px;
+  }
+
+.search-box .search-btn{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background: #000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	margin-right: 0px;
+	cursor: pointer;
+  transition: 0.4s;
+}
+
+.search-box .input-search{
+	outline: none;
+	border: 0;
+	background: #000;
+	border-radius: 50px;
+	padding: 0px 0px;
+  width: 0px; 
+  padding: 0px 0px;
+  width: 0px;
+	height: 50px;
+	color: #fff;
+  transition: 0.4s;
+}
+
+::placeholder {
+  color: #fff;
+}
+
+::-webkit-input-placeholder {
+  color: #fff;
+}
+
+:-ms-input-placeholder {
+  color: #fff;
 }

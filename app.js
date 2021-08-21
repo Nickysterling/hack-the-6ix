@@ -24,11 +24,11 @@ app.set('views', './views')
 app.set('view engine', 'ejs')
 app.get ("", function (req, res) {
   res.writeHead(302, {
-    'Location': '/Home'
+    'Location': '/home'
   });
   res.end();
 });
-app.get ("/Home", function (req, res) {
+app.get ("/home", function (req, res) {
   res.render('index', {})
 });
 app.get ("/instructions", function (req, res) {

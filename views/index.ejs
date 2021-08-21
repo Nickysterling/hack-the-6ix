@@ -11,6 +11,9 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="/css/styles.css">
+        <script src="/scripts/search.js"></script>
+        <script src="https://apis.google.com/js/plus.js?onload=init"></script>
+        <script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
 </head>
 
 <body>  
@@ -45,31 +48,6 @@
             </div>
         </section>
 
-        <section class="container-fluid px-0">
-            <div class="row align-items-center content">
-                    <div class="row justify-content-center">
-                        <div class="col-10 col-lg-8">
-                            <hr class="" id="chocolines">
-                            <div class="justify-content-center"></div>
-                            <h2><center>Chocolate Museum</center></h2>
-                            <br><center>🍩🍩🍩</center><br><br>
-                            <p class="lead text-center">Chocolate sprinkled, chocolate ball. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur quas at dicta, quos sed pariatur quibusdam quam nisi accusamus officiis tempore ratione soluta, dolores temporibus a, explicabo quisquam facere praesentium?</p>
-                            <hr class="" id="chocolines">
-                        </div>
-                    </div>    
-            </div>
-
-            <div class="row justify-content-center">
-                <div class="col-10 col-lg-8">
-                    <hr class="" id="chocolines">
-                    <div class="justify-content-center"></div>
-                    <h2><center>Chocolate Museum</center></h2>
-                    <br><center>🍩🍩🍩</center><br><br>
-                    <p class="lead text-center">Chocolate sprinkled, chocolate ball. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur quas at dicta, quos sed pariatur quibusdam quam nisi accusamus officiis tempore ratione soluta, dolores temporibus a, explicabo quisquam facere praesentium?</p>
-                    <hr class="" id="chocolines">
-                </div>    
-            </div>
-        </section>
 
         <div class = "container-fluid pt-3 text-center">
             <div class="search_Button">
@@ -78,6 +56,7 @@
 
             <div class="howTo_Button pt-4">
                 <button type="button" href="instructions.html" class="btn btn-outline-info">How to use name tbd...</button>  
+                <button type="button" onclick="onSearch()">yessir</button>
             </div>    
         </div>
 
@@ -88,7 +67,15 @@
                 <p>© 2021 Made By Zeerak, Nicholas, Keshav, Samhith.</p></strong>
             </div>        
         </div>
-
-        <script src="app.js"></script>    
+        <p id="yess"></p>
+        <script src="app.js"></script>   
+        <script>
+            function onSearch(){
+                results = new search("QUEEN");
+                const yes = JSON.parse(results.Onsearch());
+                console.log(yes)
+                document.getElementById("demo").innerHTML = yes
+            }
+        </script> 
     </body>
 </html>

@@ -20,6 +20,8 @@ function handler (req, res) {
 app.listen(8888);
 app.use(express.static('public'))
 app.use('/css', express.static(__dirname + 'public/css'))
+app.use('/images', express.static(__dirname + 'public/images'))
+app.use('/scripts', express.static(__dirname + 'public/scripts'))
 app.set('views', './views')
 app.set('view engine', 'ejs')
 app.get ("", function (req, res) {

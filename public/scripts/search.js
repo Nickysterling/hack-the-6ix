@@ -1,13 +1,11 @@
 
 class search {
-    constructor(query){this.query = query;this.bool =true; /**this.bool = this.loadClient()**/}
+    constructor(query){this.query = query;this.list = null; /**this.bool = this.loadClient()**/}
 Onsearch(){
-    if (this.bool){
-        return this.searchQuery(this.query);}
-    else{
-        return false
-    
-    }
+  return this.searchQuery(this.query);
+}
+dir(){
+  return __dirname;
 }
   loadClient() {
     gapi.client.setApiKey("AIzaSyDU5ZO9JRffbvI0K1ysljPwYECJs2awInA");
@@ -37,12 +35,22 @@ Onsearch(){
               function(err) { console.error("Execute error", err); });
   }
 searchQuery(q){
-  var searchURL = "https://www.googleapis.com/customsearch/v1?key=AIzaSyDU5ZO9JRffbvI0K1ysljPwYECJs2awInA&cx=ed7e53bb2addc0bca&q="+q;
+  var json = [];
+  for(var i = 0; i < 1; i += 10){
+  var searchURL = "https://www.googleapis.com/customsearch/v1?key=AIzaSyDU5ZO9JRffbvI0K1ysljPwYECJs2awInA&cx=ed7e53bb2addc0bca&q="+q+"&start="+i.toString();
   var xmlHttp = new XMLHttpRequest();
   xmlHttp.open( "GET", searchURL, false);
   xmlHttp.send(null);
-  console.log(xmlHttp.responseText);
-  //const json = JSON.parse(xmlHttp.responseText)
-  return xmlHttp.responseText;
+  const temp = JSON.parse(xmlHttp.responseText);
+  console.log(temp);
+  if (i == 0){
+    i++;
+  }
+  for(var z = 0; z < temp["items"].length; z++)
+  {json.push(temp["items"][z]);
+  console.log(json["items"]);}
+}
+  console.log(json);
+  return json;
 }
 }

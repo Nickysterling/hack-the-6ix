@@ -67,14 +67,33 @@
                 <p>© 2021 Made By Zeerak, Nicholas, Keshav, Samhith.</p></strong>
             </div>        
         </div>
-        <p id="yess"></p>
-        <script src="app.js"></script>   
         <script>
+            function check(url){
+                curl = "/check?checkurl="+url
+                var xmlHttp = new XMLHttpRequest();
+                xmlHttp.open( "GET", curl, false);
+                xmlHttp.send(null);
+                var checkVal = 0;
+                if (xmlHttp.responseText != "nobody expects the spanish inquisition"){
+                checkVal = parseInt(xmlHttp.responseText);
+            }
+            return checkVal;
+            };
+            
             function onSearch(){
-                results = new search("QUEEN");
-                const yes = JSON.parse(results.Onsearch());
-                console.log(yes)
-                document.getElementById("demo").innerHTML = yes
+                results = new search("mushroom");
+                list = [];
+                const yes = results.Onsearch();
+                console.log(yes);
+                for (let i = 0; i < yes.length;i++){
+                    if (check(yes[i].link)){
+                    list.push(yes[i].link)
+                    }
+                    else{
+                    continue;
+                    }
+                }
+                console.log(list);
             }
         </script> 
     </body>

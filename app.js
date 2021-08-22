@@ -1,4 +1,5 @@
 var http = require('http').createServer(handler);
+let {PythonShell} = require('python-shell');
 var fs = require('fs'); 
 var express = require("express");
 var url = require('url');
@@ -22,6 +23,7 @@ app.use(express.static('public'))
 app.use('/css', express.static(__dirname + 'public/css'))
 app.use('/images', express.static(__dirname + 'public/images'))
 app.use('/scripts', express.static(__dirname + 'public/scripts'))
+app.use('/', express.static(__dirname))
 app.set('views', './views')
 app.set('view engine', 'ejs')
 app.get ("", function (req, res) {
@@ -44,4 +46,18 @@ app.get ("/results", function (req, res) {
 });
 app.get ("/bookmarks", function (req, res) {
   res.render('bookmarks', {})
+});
+app.get("/check", function(req,res){
+	var p = url.parse(req.url, true).query;
+	var curl = p.checkurl;
+  let options = {
+    scriptPath: __dirname+'/public/scripts',
+    args: [curl]
+    };
+    PythonShell.run('scraper.py', options, function (err, results) {
+      if (err) results = null;
+      if (results != null){
+      res.end(results[0]);}
+      else {res.end("nobody expects the spanish inquisition");}
+    });
 });

@@ -1,17 +1,11 @@
 
-import requests
+import requests, sys,time
 
-def webscraper(url):
-    page = requests.get(url)
-    pageContents = page.text
-    print(pageContents)
+page = requests.get(sys.argv[1])
+pageContents = page.text
+if "recipe" in pageContents or "ingredient" in pageContents:
+    print(1)
+else:
+    print(0)
 
-    if "recipe" in pageContents or "ingredient" in pageContents:
-        return 1
-    else:
-        return 0
-
-# First scrape google search results, pagination?
-# searchInput = input("Enter your ingredients: ")
-# searchItems = searchInput.split()
 

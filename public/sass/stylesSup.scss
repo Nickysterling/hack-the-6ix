@@ -221,10 +221,15 @@ $nav-button-width: 5rem;
 }
 
 .hero {
+	
 	color: white;
 	grid-row: 1 / 2;
 	grid-column: 3 / -1;
 	> .layer {
+		position: absolute;
+		right: 150px;
+		width: 300px;
+		height: 120px;
 		display: flex;
 		height: 40%;
 	}

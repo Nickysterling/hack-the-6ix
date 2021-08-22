@@ -242,7 +242,7 @@
 
         <div class = "container-fluid pt-2 text-center">
             <div class="search_Button">
-                <a type="button" id = "footer-linkG" href="/results" class="btn pt-2 pb-2" role="button">Search Recipe</a>
+                <a type="button" id = "footer-linkG" onclick="onSearch()" href="/results" class="btn pt-2 pb-2" role="button"  >Search Recipe</a>
             </div>
 
             <div class="howTo_Button pt-4 pb-4">
@@ -258,11 +258,11 @@
             </div>        
         </div>
 
-    //<script src="app.js">
+    <!-- <script src="app.js">
         // $(document).ready(function() {
         //     $('.dairy_Picks').multiselect();
         // });
-    //</script>    
+    </script>     -->
         <script>
             function check(url){
                 curl = "/check?checkurl="+url

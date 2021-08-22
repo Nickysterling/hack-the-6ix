@@ -9,16 +9,21 @@ html,body
 
 body{
     background-color: #Fefbea;
-    /* background-color: #001B3D; */
     font-family: 'Comfortaa', sans-serif;
 }
 
-/* .bottom_Buttons{
-    background-color: 
-}*/
+#bot-nav{
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.custom-checkbox .custom-control-input:active ~ .custom-control-label::before {
+    background-color: #000; 
+}
 
 h2{
-    color:#7d0505;
+    color:#000;
     font-weight: 100;
     font-size: 2.5rem;
 }
@@ -46,10 +51,12 @@ p{
 }
 
 #navLinks .nav-link:hover {
-    color:#7d0505;
+    background-color: #Fefbea;
+    color:#000;
 }
 
 #mainNav .navbar-brand{
+    background-color: #000;
     color: #ffff;
     font-size: 1.8rem;
     font-weight: 100;
@@ -61,8 +68,18 @@ p{
 }
 
 #headings h1{
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     font-weight: 100;
+}
+
+#searchRecipeButton{
+    background-color: #000;
+    color:#Fefbea;
+}
+
+#searchRecipeButton:hover{
+    background-color: #Fefbea;
+    color:#000;
 }
 
 /* .scrolled{

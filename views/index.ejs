@@ -38,7 +38,6 @@
                 <div class="col">
                     <div id="headings" class="text-white text-center d-none d-lg-block mg-top-5">
                         <h1><span>🌮</span> <span>RecipeHunt</span> <span>🥗</span></h1>
-                        <br>
                     </div>
                 </div>
 
@@ -391,7 +390,9 @@
                 </div>
             </div>
 
-            <button class = "btn btn-dark" onclick="checkBox()">Confirm</button>
+            <div class="container-fluid pb-3">
+                <button id = "searchRecipeButton" style="border:none;" onclick="checkBox()">Search For Recipes</button>
+            </div>
             <script>
             
             let itemSelected = []; 
@@ -420,9 +421,9 @@
             </script>
         </section>
 
-        <center><p class = "container-fluid pt-5">Have a recipe to search? You can type it in the search bar below. 😎</p></center>
+        <!-- <center><p class = "container-fluid pt-5">Have a recipe to search? You can type it in the search bar below. 😎</p></center> -->
 
-        <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+        <!-- <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 
         <div class="wrapper">
             <div class="search-box">
@@ -434,17 +435,15 @@
         <div class = "container-fluid pt-2 text-center">
             <div class="search_Button">
                 <a type="button" id = "footer-linkG" href="/results" class="btn pt-2 pb-2" role="button">Search Recipe</a>
-            </div>
-
-            <div class="howTo_Button pt-4 pb-4">
-                <a type="button" id = "footer-linkG" class="btn pt-2 pb-2" href="/instructions" role="button">How to use name tbd...</a>  
             </div>    
-        </div>
+        </div> -->
 
-        <div class="container-fluid pt-1 text-white" style="background-color:black; padding-bottom:0;">
+        <div id = "bot-nav" class="container-fluid pt-4 text-white" style="background-color:black; padding-bottom:0;">
             <div class="bottom-nav text-center pt-3 pb-3">
                 <h5>Github Repository</h5>
-                <strong><a id = "footer-linkG" class="btn" href="https://github.com/Nickysterling/hack-the-6ix" role="button">Github</a>
+                <div class="container-fluid pt-2 pb-4">
+                    <strong><a id = "footer-linkG" class="btn" href="https://github.com/Nickysterling/hack-the-6ix" role="button">Github</a>
+                </div>
                 <h5>© 2021 Made By Zeerak, Nicholas, Keshav, Samhith.</h5></strong>
             </div>        
         </div>

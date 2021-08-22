@@ -279,11 +279,11 @@
             function onSearch(){
                 results = new search("mushroom");
                 list = [];
-                const yes = results.Onsearch();
-                console.log(yes);
-                for (let i = 0; i < yes.length;i++){
-                    if (check(yes[i].link)){
-                    list.push(yes[i].link)
+                const allrs = results.Onsearch();
+                console.log(allrs);
+                for (let i = 0; i < allrs.length;i++){
+                    if (check(allrs[i].link)){
+                    list.push(allrs[i].link)
                     }
                     else{
                     continue;

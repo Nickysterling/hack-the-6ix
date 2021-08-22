@@ -49,8 +49,7 @@
                             <input type="text" class="input-search" placeholder="What are you looking for?">
                         </div>
                     </div>
-                    <center><p>Search the ingredient in the search bar above, or you can select them below.</p></center>
-
+                    <!-- <center><p>Search the ingredient in the search bar above, or you can select them below.</p></center> -->
                 </div>
             </div>
         </section>
@@ -416,12 +415,14 @@
                 checkArray(chocolateProducts);
                 checkArray(nuts);
                 console.log(`items = ${itemSelected}`);
+                items = itemSelected.join();
+                onSearch(items)
                 itemSelected = [];
             }
             </script>
         </section>
+        <div id="results"></div>
 
-        <!-- <center><p class = "container-fluid pt-5">Have a recipe to search? You can type it in the search bar below. 😎</p></center> -->
 
         <!-- <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 
@@ -435,6 +436,7 @@
         <div class = "container-fluid pt-2 text-center">
             <div class="search_Button">
                 <a type="button" id = "footer-linkG" href="/results" class="btn pt-2 pb-2" role="button">Search Recipe</a>
+
             </div>    
         </div> -->
 
@@ -448,11 +450,13 @@
             </div>        
         </div>
 
-    <!-- //<script src="app.js">
+
+    <!-- <script src="app.js">
         // $(document).ready(function() {
         //     $('.dairy_Picks').multiselect();
         // });
-    //</script>     -->
+    </script>     -->
+    <script src="scripts/search.js"></script>
         <script>
             function check(url){
                 curl = "/check?checkurl="+url
@@ -466,20 +470,27 @@
             return checkVal;
             };
             
-            function onSearch(){
-                results = new search("mushroom");
+            function onSearch(q){
+                results = new search(q);
                 list = [];
-                const yes = results.Onsearch();
-                console.log(yes);
-                for (let i = 0; i < yes.length;i++){
-                    if (check(yes[i].link)){
-                    list.push(yes[i].link)
+                const allrs = results.Onsearch();
+                console.log(allrs);
+                for (let i = 0; i < allrs.length;i++){
+                    if (check(allrs[i].link)){
+                    list.push(allrs[i].link)
                     }
                     else{
                     continue;
                     }
                 }
                 console.log(list);
+                var listr = document.getElementById("results");
+                var listOfURLS = [];
+                list.forEach(function(element) {
+                listOfURLS.push("<p><a herf='"+element+ "'>" + element + "</a></p>");
+                });
+
+                listr.innerHTML = listOfURLS.join('');
             }
         </script> 
     </body>

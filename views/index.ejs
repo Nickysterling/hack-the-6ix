@@ -64,6 +64,7 @@
             </div>
         </section>
 
+        <div class = "container-fluid pt-3 text-center">
         <section class="container-fluid px-0 text-center">
             <div class="ingredientsList">
                 <div class="row">
@@ -92,19 +93,18 @@
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="" id = 2>
                                     <label class="form-check-label" for="flexCheckChecked">
-                                        soymilk
+                                        Soymilk
                                     </label>
                                 </div>
                                 
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="" id = 3>
                                     <label class="form-check-label" for="flexCheckChecked">
-                                        butter
+                                        Butter
                                     </label>
                                 </div>
                                 <!-- ---------------------------------------------------------------------------- -->
-                                <button onclick="check()">Check Checkbox</button>
-
+                                
                                 <script>
                                     const dairyProducts = [
                                         ["milk" , 0],
@@ -112,31 +112,6 @@
                                         ["soymilk" , 2],
                                         ["butter" , 3]
                                     ];
-
-                                    const vegetableProducts = [
-                                        ["carrot" , 0],
-                                        ["broccoli" , 1],
-                                        ["lettuce" , 2],
-                                        ["cucumber" , 3]
-                                    ];
-
-                                    // const vegetableProducts = [
-                                    //     ["carrot" , 0],
-                                    //     ["broccoli" , 1],
-                                    //     ["lettuce" , 2],
-                                    //     ["cucumber" , 3]
-                                    // ];
-
-                                    const itemSelected = []; 
-
-                                    function check() {
-                                        for (let i = 0; i < dairyProducts.length; i++){
-                                            if(document.getElementById(dairyProducts[i][1]).checked){
-                                                itemSelected[i] = dairyProducts[i][0];
-                                            }                                                                               
-                                        }
-                                        console.log(`items = ${itemSelected}`);
-                                    }
                                 </script>
                                 <!-- ---------------------------------------------------------------------------- -->
 
@@ -167,6 +142,43 @@
                                 <h5 class="card-title text-center">
                                     Vegetables
                                 </h5>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id = 4>
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Carrot
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id = 5>
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        Broccoli
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id = 6>
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        Lettuce
+                                    </label>
+                                </div>
+                                
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id = 7>
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        Cucumber
+                                    </label>
+                                </div>
+
+                                <script>
+                                    const vegetableProducts = [
+                                        ["carrot" , 4],
+                                        ["broccoli" , 5],
+                                        ["lettuce" , 6],
+                                        ["cucumber" , 7]
+                                    ];
+                                </script>
                             </div>
                         </div>
                     </div>
@@ -178,6 +190,43 @@
                                 <h5 class="card-title text-center">
                                     Fruits
                                 </h5>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id = 8>
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Apple
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id = 9>
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        Banana
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id = 10>
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        Cherries
+                                    </label>
+                                </div>
+                                
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id = 11>
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        Orange
+                                    </label>
+                                </div>
+
+                                <script>
+                                    const fruitProducts = [
+                                        ["apple" , 8],
+                                        ["banana" , 9],
+                                        ["cherries" , 10],
+                                        ["orange" , 11]
+                                    ];
+                                </script>
                             </div>
                         </div>
                     </div>
@@ -189,6 +238,43 @@
                                 <h5 class="card-title text-center">
                                     Grain
                                 </h5>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id = 12>
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        White Bread
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id = 13>
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        Bagel
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id = 14>
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        Whole Wheat Bread
+                                    </label>
+                                </div>
+                                
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id = 15>
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        Rice
+                                    </label>
+                                </div>
+
+                                <script>
+                                    const grainProducts = [
+                                        ["white bread" , 12],
+                                        ["bagel" , 13],
+                                        ["whole wheat bread" , 14],
+                                        ["rice" , 15]
+                                    ];
+                                </script>
                             </div>
                         </div>
                     </div>
@@ -198,8 +284,45 @@
                             <img class="card-img-top" src="/images/Vanilla.jpg" alt="This is a photo of vanilla extract">
                             <div class="card-body">
                                 <h5 class="card-title text-center">
-                                    Vanilla
+                                    Baking
                                 </h5>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id = 16>
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Flour
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id = 17>
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        Baking Soda
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id = 18>
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        Baking Powder
+                                    </label>
+                                </div>
+                                
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id = 19>
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        Yeast
+                                    </label>
+                                </div>
+
+                                <script>
+                                    const bakingProducts = [
+                                        ["flour" , 16],
+                                        ["baking soda" , 17],
+                                        ["baking powder" , 18],
+                                        ["yeast" , 19]
+                                    ];
+                                </script>
                             </div>
                         </div>
                     </div>
@@ -211,6 +334,35 @@
                                 <h5 class="card-title text-center">
                                     Chocolate
                                 </h5>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id = 20>
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Dark Chocolate
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id = 21>
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        Milk Chocolate
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id = 22>
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        White Chocolate
+                                    </label>
+                                </div>
+                                
+                                <script>
+                                    const chocolateProducts = [
+                                        ["dark chocolate" , 20],
+                                        ["milk chocolate" , 21],
+                                        ["white chocolate" , 22],
+                                    ];
+                                </script>
                             </div>
                         </div>
                     </div>
@@ -222,11 +374,82 @@
                                 <h5 class="card-title text-center">
                                     Nuts
                                 </h5>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id = 23>
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Almonds
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id = 24>
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        Walnuts
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id = 25>
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        Peanuts
+                                    </label>
+                                </div>
+                                
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id = 26>
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        Hazelnuts
+                                    </label>
+                                </div>
+
+                                <script>
+                                    const nuts = [
+                                        ["almonds" , 23],
+                                        ["walnuts" , 24],
+                                        ["peanuts" , 25],
+                                        ["hazelnuts" , 26]
+                                    ];
+                                </script>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <button class = "btn btn-dark" onclick="checkBox()">Confirm</button>
+            <script>
+            
+            let itemSelected = []; 
+
+            function checkArray(array){
+                for (let i = 0; i < array.length; i++){
+                    if(document.getElementById(array[i][1]).checked && !itemSelected.includes(array[i][0])){
+                        itemSelected.push(array[i][0]);
+                    }
+                    // else
+                    //     delete itemSelected[itemSelected.findIndex(array[i][0])];                                                                               
+                }
+            }
+                                                                                
+            function checkBox(){
+                // for (let i = 0; i < dairyProducts.length; i++){
+                //     if(document.getElementById(dairyProducts[i][1]).checked){
+                //         itemSelected[i] = dairyProducts[i][0];
+                //     }                                                                               
+                // }
+                // console.log(`items = ${itemSelected}`);
+                checkArray(dairyProducts);
+                checkArray(vegetableProducts);
+                checkArray(fruitProducts);
+                checkArray(grainProducts);
+                checkArray(bakingProducts);
+                checkArray(chocolateProducts);
+                checkArray(nuts);
+                console.log(`items = ${itemSelected}`);
+                itemSelected = [];
+            }
+            </script>
         </section>
 
         <center><p class = "container-fluid pt-5">Have a recipe to search? You can type it in the search bar below. 😎</p></center>
@@ -257,6 +480,7 @@
                 <h5>© 2021 Made By Zeerak, Nicholas, Keshav, Samhith.</h5></strong>
             </div>        
         </div>
+
 
     <!-- <script src="app.js">
         // $(document).ready(function() {

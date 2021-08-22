@@ -37,7 +37,7 @@ dir(){
 searchQuery(q){
   var json = [];
   for(var i = 0; i < 1; i += 10){
-  var searchURL = "https://www.googleapis.com/customsearch/v1?key=AIzaSyDU5ZO9JRffbvI0K1ysljPwYECJs2awInA&cx=ed7e53bb2addc0bca&q="+q+"&start="+i.toString();
+  var searchURL = "https://www.googleapis.com/customsearch/v1?key=AIzaSyCyoi0ClAUotwyO6Fv9A88L8Q8oa7agx8Y&cx=ed7e53bb2addc0bca&q="+q+"&start="+i.toString();
   var xmlHttp = new XMLHttpRequest();
   xmlHttp.open( "GET", searchURL, false);
   xmlHttp.send(null);

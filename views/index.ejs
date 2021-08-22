@@ -465,7 +465,7 @@
 
         <div class = "container-fluid pt-2 text-center">
             <div class="search_Button">
-                <a type="button" id = "footer-linkG" href="/results" class="btn pt-2 pb-2" role="button">Search Recipe</a>
+                <button id = "footer-linkG" onclick="onSearch()" href="/results" class="btn pt-2 pb-2" role="button"  >Search Recipe</button>
             </div>
 
             <div class="howTo_Button pt-4 pb-4">
@@ -481,11 +481,13 @@
             </div>        
         </div>
 
-    <!-- //<script src="app.js">
+
+    <!-- <script src="app.js">
         // $(document).ready(function() {
         //     $('.dairy_Picks').multiselect();
         // });
-    //</script>     -->
+    </script>     -->
+    <script src="scripts/search.js"></script>
         <script>
             function check(url){
                 curl = "/check?checkurl="+url
@@ -502,11 +504,11 @@
             function onSearch(){
                 results = new search("mushroom");
                 list = [];
-                const yes = results.Onsearch();
-                console.log(yes);
-                for (let i = 0; i < yes.length;i++){
-                    if (check(yes[i].link)){
-                    list.push(yes[i].link)
+                const allrs = results.Onsearch();
+                console.log(allrs);
+                for (let i = 0; i < allrs.length;i++){
+                    if (check(allrs[i].link)){
+                    list.push(allrs[i].link)
                     }
                     else{
                     continue;

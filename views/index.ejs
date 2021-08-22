@@ -447,11 +447,13 @@
                 checkArray(chocolateProducts);
                 checkArray(nuts);
                 console.log(`items = ${itemSelected}`);
+                items = itemSelected.join();
+                onSearch(items)
                 itemSelected = [];
             }
             </script>
         </section>
-
+        <div id="results"></div>
         <center><p class = "container-fluid pt-5">Have a recipe to search? You can type it in the search bar below. 😎</p></center>
 
         <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
@@ -465,7 +467,7 @@
 
         <div class = "container-fluid pt-2 text-center">
             <div class="search_Button">
-                <button id = "footer-linkG" onclick="onSearch()" href="/results" class="btn pt-2 pb-2" role="button"  >Search Recipe</button>
+                <button id = "footer-linkG" onclick="onSearch()" class="btn pt-2 pb-2" role="button"  >Search Recipe</button>
             </div>
 
             <div class="howTo_Button pt-4 pb-4">
@@ -501,8 +503,8 @@
             return checkVal;
             };
             
-            function onSearch(){
-                results = new search("mushroom");
+            function onSearch(q){
+                results = new search(q);
                 list = [];
                 const allrs = results.Onsearch();
                 console.log(allrs);
@@ -515,6 +517,13 @@
                     }
                 }
                 console.log(list);
+                var listr = document.getElementById("results");
+                var listOfURLS = [];
+                list.forEach(function(element) {
+                listOfURLS.push("<p><a herf='"+element+ "'>" + element + "</a></p>");
+                });
+
+                listr.innerHTML = listOfURLS.join('');
             }
         </script> 
     </body>

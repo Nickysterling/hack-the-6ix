@@ -64,173 +64,6 @@
             </div>
         </section>
 
-        <section class="container-fluid px-0 text-center">
-            <div class="ingredientsList">
-                <div class="row">
-                    <div class="col">
-                        <div class="card" style="width:11rem;">
-                            <img class="card-img-top" src="/images/dairy2.png" alt="This is a photo of a milk carton">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">
-                                    Dairy
-                                </h5>
-                                
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id = 0>
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        Milk
-                                    </label>
-                                </div>
-
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id = 1>
-                                    <label class="form-check-label" for="flexCheckChecked">
-                                        Cream
-                                    </label>
-                                </div>
-
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id = 2>
-                                    <label class="form-check-label" for="flexCheckChecked">
-                                        soymilk
-                                    </label>
-                                </div>
-                                
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id = 3>
-                                    <label class="form-check-label" for="flexCheckChecked">
-                                        butter
-                                    </label>
-                                </div>
-                                <!-- ---------------------------------------------------------------------------- -->
-                                <button onclick="check()">Check Checkbox</button>
-
-                                <script>
-                                    const dairyProducts = [
-                                        ["milk" , 0],
-                                        ["cream" , 1],
-                                        ["soymilk" , 2],
-                                        ["butter" , 3]
-                                    ];
-
-                                    const vegetableProducts = [
-                                        ["carrot" , 0],
-                                        ["broccoli" , 1],
-                                        ["lettuce" , 2],
-                                        ["cucumber" , 3]
-                                    ];
-
-                                    // const vegetableProducts = [
-                                    //     ["carrot" , 0],
-                                    //     ["broccoli" , 1],
-                                    //     ["lettuce" , 2],
-                                    //     ["cucumber" , 3]
-                                    // ];
-
-                                    const itemSelected = []; 
-
-                                    function check() {
-                                        for (let i = 0; i < dairyProducts.length; i++){
-                                            if(document.getElementById(dairyProducts[i][1]).checked){
-                                                itemSelected[i] = dairyProducts[i][0];
-                                            }                                                                               
-                                        }
-                                        console.log(`items = ${itemSelected}`);
-                                    }
-                                </script>
-                                <!-- ---------------------------------------------------------------------------- -->
-
-                                <!-- <label class="form-label select-label">Dairy</label> -->
-                                <!-- <select class="dairy_Picks" name ="Dairy Products[]" multiple="multiple" style="height: 100%; width: 100%;">
-                                    <option value="1">Milk</option>
-                                    <option value="2">Cheese</option>
-                                    <option value="3">Ice Cream</option>
-                                    <option value="4">Butter</option>
-                                    <option value="5">Soymilk</option>
-                                </select> -->
-
-                                <!-- <select id="dairy_Picks" multiple="multiple">
-                                    <option value="Milk">Milk</option>
-                                    <option value="Cheese">Cheese</option>
-                                    <option value="Ice Cream" selected="selected">Ice Cream</option>
-                                    <option value="Butter" selected="selected">Butter</option>
-                                    <option value="Soymilk">Soymilk</option>
-                                </select> -->
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card" style="width:11rem;">
-                            <img class="card-img-top" src="/images/Veg1.png" alt="This is a photo of vegetables">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">
-                                    Vegetables
-                                </h5>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card" style="width:11rem;">
-                            <img class="card-img-top" src="/images/Fruit2.png" alt="This is a photo of an apple and orange together">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">
-                                    Fruits
-                                </h5>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card" style="width:11rem;">
-                            <img class="card-img-top" src="/images/bread.png" alt="This is a photo of a bread">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">
-                                    Grain
-                                </h5>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card" style="width:11rem;">
-                            <img class="card-img-top" src="/images/Vanilla.jpg" alt="This is a photo of vanilla extract">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">
-                                    Vanilla
-                                </h5>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card" style="width:11rem;">
-                            <img class="card-img-top" src="/images/Chocolate.png" alt="This is a photo of a bar of chocolate">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">
-                                    Chocolate
-                                </h5>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col">
-                        <div class="card" style="width:11rem;">
-                            <img class="card-img-top" src="/images/nut.jpg" alt="This is a photo of an almond">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">
-                                    Nuts
-                                </h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <center><p class = "container-fluid pt-5">Have a recipe to search? You can type it in the search bar below. 😎</p></center>
-
         <div class = "container-fluid pt-3 text-center">
         <section class="container-fluid px-0 text-center">
             <div class="ingredientsList">
@@ -271,8 +104,7 @@
                                     </label>
                                 </div>
                                 <!-- ---------------------------------------------------------------------------- -->
-                                <button onclick="check()">Check Checkbox</button>
-
+                                
                                 <script>
                                     const dairyProducts = [
                                         ["milk" , 0],
@@ -281,12 +113,7 @@
                                         ["butter" , 3]
                                     ];
 
-                                    const vegetableProducts = [
-                                        ["carrot" , 0],
-                                        ["broccoli" , 1],
-                                        ["lettuce" , 2],
-                                        ["cucumber" , 3]
-                                    ];
+                                    
 
                                     // const vegetableProducts = [
                                     //     ["carrot" , 0],
@@ -294,35 +121,6 @@
                                     //     ["lettuce" , 2],
                                     //     ["cucumber" , 3]
                                     // ];
-
-                                    const itemSelected = []; 
-
-                                    function checkArray(array=[]){
-                                        for (let i = 0; i < array.length; i++){
-                                            if(document.getElementById(array[i][1]).checked){
-                                                itemSelected[i] = array[i][0];
-                                            }                                                                               
-                                        }
-                                        console.log(`items = ${itemSelected}`);
-                                    }
-                            
-                                    function check() {
-                                        // for (let i = 0; i < dairyProducts.length; i++){
-                                        //     if(document.getElementById(dairyProducts[i][1]).checked){
-                                        //         itemSelected[i] = dairyProducts[i][0];
-                                        //     }                                                                               
-                                        // }
-                                        // console.log(`items = ${itemSelected}`);
-                                        checkArray(dairyProducts);
-                                        checkArray(vegetableProducts);
-                                        checkArray(fruitProducts);
-                                        checkArray(grainProducts);
-                                        checkArray(vanillaProducts);
-                                        checkArray(chocolateProducts);
-                                        checkArray(nuts);
-                                    }
-
-
                                 </script>
                                 <!-- ---------------------------------------------------------------------------- -->
 
@@ -355,32 +153,41 @@
                                 </h5>
 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id = 0>
+                                    <input class="form-check-input" type="checkbox" value="" id = 4>
                                     <label class="form-check-label" for="flexCheckDefault">
                                         Carrot
                                     </label>
                                 </div>
 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id = 1>
+                                    <input class="form-check-input" type="checkbox" value="" id = 5>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         Broccoli
                                     </label>
                                 </div>
 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id = 2>
+                                    <input class="form-check-input" type="checkbox" value="" id = 6>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         Lettuce
                                     </label>
                                 </div>
                                 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id = 3>
+                                    <input class="form-check-input" type="checkbox" value="" id = 7>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         Cucumber
                                     </label>
                                 </div>
+
+                                <script>
+                                    const vegetableProducts = [
+                                        ["carrot" , 4],
+                                        ["broccoli" , 5],
+                                        ["lettuce" , 6],
+                                        ["cucumber" , 7]
+                                    ];
+                                </script>
                             </div>
                         </div>
                     </div>
@@ -420,6 +227,15 @@
                                         Orange
                                     </label>
                                 </div>
+
+                                <script>
+                                    // const fruitProducts = [
+                                    //     ["apple" , 8],
+                                    //     ["broccoli" , 9],
+                                    //     ["lettuce" , 10],
+                                    //     ["cucumber" , 11]
+                                    // ];
+                                </script>
                             </div>
                         </div>
                     </div>
@@ -497,6 +313,37 @@
                     </div>
                 </div>
             </div>
+
+            <button onclick="checkBox()">Check Checkbox</button>
+            <script>
+            
+            const itemSelected = []; 
+
+            function checkArray(array){
+                for (let i = 0; i < array.length; i++){
+                    if(document.getElementById(array[i][1]).checked && !itemSelected.includes(array[i][0])){
+                        itemSelected.push(array[i][0]);
+                    }                                                                                  
+                }
+            }
+                                                                                
+            function checkBox(){
+                // for (let i = 0; i < dairyProducts.length; i++){
+                //     if(document.getElementById(dairyProducts[i][1]).checked){
+                //         itemSelected[i] = dairyProducts[i][0];
+                //     }                                                                               
+                // }
+                // console.log(`items = ${itemSelected}`);
+                checkArray(dairyProducts);
+                checkArray(vegetableProducts);
+                // checkArray(fruitProducts);
+                // checkArray(grainProducts);
+                // checkArray(vanillaProducts);
+                // checkArray(chocolateProducts);
+                // checkArray(nuts);
+                console.log(`items = ${itemSelected}`);
+            }
+            </script>
         </section>
 
         <center><p class = "container-fluid pt-5">Have a recipe to search? You can type it in the search bar below. 😎</p></center>
@@ -528,11 +375,11 @@
             </div>        
         </div>
 
-    //<script src="app.js">
+    <!-- //<script src="app.js">
         // $(document).ready(function() {
         //     $('.dairy_Picks').multiselect();
         // });
-    //</script>    
+    //</script>     -->
         <script>
             function check(url){
                 curl = "/check?checkurl="+url

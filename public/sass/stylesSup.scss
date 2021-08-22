@@ -6,20 +6,22 @@ html,body {
         background-color: #000;
     }
     
-    #navLinks .nav-link {
-        color:white;
-    }
-    
-    #navLinks .nav-link:hover {
-        color:#7d0505;
-    }
-    
-    #mainNav .navbar-brand{
-        color: #ffff;
-        font-size: 1.8rem;
-        font-weight: 100;
-        padding-left: 0.1em;
-    }
+	#navLinks .nav-link {
+		color:white;
+	}
+	
+	#navLinks .nav-link:hover {
+		background-color: #Fefbea;
+		color:#000;
+	}
+	
+	#mainNav .navbar-brand{
+		background-color: #000;
+		color: #ffff;
+		font-size: 1.8rem;
+		font-weight: 100;
+		padding-left: 0.1em;
+	}
 }
 
 $scene: var(--scene);
